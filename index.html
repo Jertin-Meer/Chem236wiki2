@@ -24,9 +24,9 @@
       padding: 10px 18px 36px;
     }
 
-    /* ── Title ── */
+    /* Title */
     h1.page-title {
-      font-family: 'Linux Libertine', 'Georgia', serif;
+      font-family: 'Linux Libertine', Georgia, serif;
       font-size: 1.95em;
       font-weight: normal;
       border-bottom: 1px solid #a2a9b1;
@@ -41,7 +41,7 @@
       margin-bottom: 12px;
     }
 
-    /* ── Headings ── */
+    /* Headings */
     h2 {
       font-family: 'Linux Libertine', Georgia, serif;
       font-size: 1.45em;
@@ -51,20 +51,12 @@
       padding-bottom: 2px;
       clear: both;
     }
-    h3 {
-      font-size: 1.12em;
-      font-weight: bold;
-      margin: 14px 0 5px;
-    }
-    h4 {
-      font-size: 1em;
-      font-weight: bold;
-      margin: 11px 0 4px;
-    }
+    h3 { font-size: 1.12em; font-weight: bold; margin: 14px 0 5px; }
+    h4 { font-size: 1em; font-weight: bold; margin: 11px 0 4px; }
     p { margin-bottom: 10px; }
     ul, ol { margin-bottom: 10px; }
 
-    /* ── Infobox ── */
+    /* Infobox — gray header only, no blue */
     .infobox {
       float: right;
       clear: right;
@@ -76,7 +68,7 @@
       width: 272px;
     }
     .infobox-title {
-      background: #cee0f2;
+      background: #eaecf0;
       text-align: center;
       font-size: 1.08em;
       font-weight: bold;
@@ -104,7 +96,7 @@
       white-space: nowrap;
     }
 
-    /* ── TOC ── */
+    /* TOC */
     .toc {
       background: #f8f9fa;
       border: 1px solid #a2a9b1;
@@ -120,7 +112,7 @@
     .toc li { margin: 2px 0; }
     .toc ol ol { padding-left: 16px; list-style-type: decimal; }
 
-    /* ── Figures ── */
+    /* Figures — float right, gray border, white/gray bg */
     .fig {
       float: right;
       clear: right;
@@ -128,7 +120,7 @@
       border: 1px solid #a2a9b1;
       margin: 0 0 14px 22px;
       padding: 6px;
-      width: 296px;
+      width: 340px;
       font-size: 0.81em;
       line-height: 1.42;
     }
@@ -137,14 +129,37 @@
       clear: both;
       margin: 16px auto;
       width: auto;
-      max-width: 580px;
+      max-width: 660px;
       display: block;
     }
-    .fig svg, .fig img { display: block; width: 100%; height: auto; }
+    .fig img { display: block; width: 100%; height: auto; }
     .fig-cap { margin-top: 5px; color: #202122; }
-    .fig-src { margin-top: 3px; color: #54595d; font-style: italic; }
+    .fig-src { margin-top: 3px; color: #54595d; font-style: italic; font-size: 0.92em; }
 
-    /* ── Tables ── */
+    /* Plain text cascade scheme */
+    .text-scheme {
+      display: inline-block;
+      background: #f8f9fa;
+      border: 1px solid #a2a9b1;
+      padding: 10px 16px;
+      margin: 10px 0 12px;
+      font-size: 0.9em;
+    }
+    .scheme-line {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.1em;
+      color: #202122;
+      margin-bottom: 5px;
+      letter-spacing: 0.04em;
+    }
+    .scheme-note {
+      color: #54595d;
+      font-style: italic;
+      font-size: 0.9em;
+      margin: 0;
+    }
+
+    /* Tables */
     .wikitable {
       border-collapse: collapse;
       width: 100%;
@@ -171,55 +186,51 @@
       margin: 3px 0 14px;
     }
 
-    /* ── Callout boxes ── */
+    /* Callout and side boxes — gray only, no yellow, no blue */
     .callout {
-      background: #fdf6e3;
-      border: 1px solid #d0b060;
-      border-left: 4px solid #c8a020;
+      background: #f8f9fa;
+      border: 1px solid #a2a9b1;
+      border-left: 3px solid #555;
       padding: 10px 14px;
       margin: 14px 0;
       font-size: 0.91em;
     }
-    .callout-title { font-weight: bold; margin-bottom: 4px; }
+    .callout-title { font-weight: bold; margin-bottom: 4px; color: #202122; }
 
-    .chem236box {
-      background: #eaf3fb;
-      border: 1px solid #7cb3d4;
-      border-left: 4px solid #1976d2;
+    .sidebox {
+      background: #f8f9fa;
+      border: 1px solid #a2a9b1;
+      border-left: 3px solid #555;
       padding: 10px 14px;
       margin: 14px 0;
       font-size: 0.91em;
     }
-    .chem236box .boxtitle { font-weight: bold; margin-bottom: 5px; color: #1565c0; }
+    .sidebox .boxtitle { font-weight: bold; margin-bottom: 5px; color: #202122; }
 
-    /* ── References ── */
+    /* References */
     .reflist { font-size: 0.85em; line-height: 1.55; }
     .reflist ol { padding-left: 24px; }
     .reflist li { margin-bottom: 6px; }
 
     sup { font-size: 0.74em; }
-    .hatnote { padding-left: 1.6em; font-style: italic; color: #54595d; font-size: 0.9em; margin-bottom: 8px; }
     hr.divider { border: none; border-top: 1px solid #a2a9b1; margin: 26px 0 14px; }
     .clearfix::after { content: ""; display: table; clear: both; }
 
-    @media (max-width: 620px) {
+    @media (max-width: 640px) {
       .infobox, .fig { float: none; width: 100%; margin: 0 0 14px; }
       .toc { max-width: 100%; width: 100%; }
+      .text-scheme { width: 100%; }
     }
   </style>
 </head>
 <body>
 <div class="page-wrap">
 
-<!-- ═══════════════════════════════════════════════════
-     PAGE TITLE
-════════════════════════════════════════════════════ -->
+<!-- PAGE TITLE -->
 <h1 class="page-title">Cascade reactions</h1>
 <p class="page-subtitle">Enzymatic and total synthetic approaches to building molecular complexity</p>
 
-<!-- ═══════════════════════════════════════════════════
-     INFOBOX
-════════════════════════════════════════════════════ -->
+<!-- INFOBOX -->
 <div class="infobox" role="complementary" aria-label="Cascade reactions summary infobox">
   <div class="infobox-title">Cascade Reactions</div>
   <div class="infobox-subtitle">Multiple transformations, one operation</div>
@@ -234,18 +245,14 @@
   </table>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     LEAD
-════════════════════════════════════════════════════ -->
+<!-- LEAD -->
 <p>A <b>cascade reaction</b> is a sequence of two or more chemical transformations that occur in a defined order within a single reaction vessel, where the product or reactive intermediate of one step directly participates in the next without isolation or workup. The term is broadly synonymous with <b>tandem reaction</b> and <b>domino reaction</b>, though different authors use these terms with varying emphasis on mechanistic connectivity versus operational convenience.<sup><a href="#ref4">[4]</a></sup></p>
 
 <p>Cascade reactions are valued in synthetic chemistry primarily for their ability to increase molecular complexity rapidly and to reduce the number of discrete synthetic steps required to reach a target. They find application across multiple areas of chemistry, including total synthesis of natural products, biocatalysis, medicinal chemistry, and biosynthetic pathway design.<sup><a href="#ref2">[2]</a></sup></p>
 
 <p>In biosynthesis, enzymatic cascade reactions are common and carry out complex structural transformations with high stereochemical fidelity under mild aqueous conditions. Enzymes achieve this selectivity through active-site preorganization, which positions substrates and catalytic residues for sequential reactivity. In synthetic laboratories, cascade reactions may be ionic, radical, pericyclic, or transition-metal-catalyzed, and are designed by matching compatible reaction conditions across sequential steps.<sup><a href="#ref1">[1]</a></sup></p>
 
-<!-- ═══════════════════════════════════════════════════
-     TABLE OF CONTENTS
-════════════════════════════════════════════════════ -->
+<!-- TABLE OF CONTENTS -->
 <div class="toc" id="toc">
   <div class="toc-title">Contents</div>
   <ol>
@@ -280,20 +287,25 @@
   </ol>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     1. OVERVIEW
-════════════════════════════════════════════════════ -->
+<!-- 1. OVERVIEW -->
 <h2 id="overview">Overview</h2>
 
-<p>Chemical synthesis has historically been organized as a series of discrete steps, each requiring isolation, purification, and characterization of the intermediate before advancing to the next transformation. Cascade reactions offer an alternative organizing principle: multiple transformations are designed to occur in sequence, with each step enabled by the structural change produced in the preceding one.<sup><a href="#ref2">[2]</a></sup></p>
+<!-- Figure 1: Diels-Alder BW SVG -->
+<div class="fig" id="fig1">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diels-Alder_%281%2C3-butadiene_%2B_ethylene%29_bw.svg"
+       alt="Reaction scheme showing 1,3-butadiene and ethylene reacting to form cyclohexene."
+       loading="lazy" />
+  <div class="fig-cap"><b>Figure 1.</b> Diels–Alder reaction of 1,3-butadiene and ethylene to give cyclohexene. This reaction is a simple pericyclic example that illustrates how multiple bonds can reorganize in a single concerted step.</div>
+  <div class="fig-src">Image: Wikimedia Commons. Author: Innerstream. Public domain; simple structural formula. <a href="https://commons.wikimedia.org/wiki/File:Diels-Alder_(1,3-butadiene_%2B_ethylene)_bw.svg">Source</a>.</div>
+</div>
+
+<p>Chemical synthesis has historically been organized as a series of discrete steps, each requiring isolation, purification, and characterization of an intermediate before advancing to the next transformation. Cascade reactions offer an alternative organizing principle: multiple transformations are designed to occur in sequence, with each step enabled by the structural change produced in the preceding one.<sup><a href="#ref2">[2]</a></sup></p>
 
 <p>Nature uses this principle extensively. Biosynthetic pathways in terpene, polyketide, and alkaloid metabolism commonly involve enzyme-controlled cascades that build ring systems, establish stereocenters, or functionalize unreactive carbon–hydrogen bonds in a single metabolic event.<sup><a href="#ref1">[1]</a></sup> Synthetic chemists have adapted this logic to develop routes that converge rapidly on complex molecular architectures.</p>
 
-<p>The practical consequence of a well-designed cascade is a reduction in synthetic operations: fewer isolation steps, less material loss per bond formed, and, often, better stereochemical outcomes because reactive intermediates are channeled directly toward the desired product rather than being intercepted by competing processes.<sup><a href="#ref2">[2]</a></sup></p>
+<p>The practical consequence of a well-designed cascade is a reduction in synthetic operations: fewer isolation steps, less material loss per bond formed, and often better stereochemical outcomes because reactive intermediates are channeled directly toward the desired product rather than intercepted by competing processes.<sup><a href="#ref2">[2]</a></sup></p>
 
-<!-- ═══════════════════════════════════════════════════
-     2. DEFINITION AND TERMINOLOGY
-════════════════════════════════════════════════════ -->
+<!-- 2. DEFINITION AND TERMINOLOGY -->
 <h2 id="definition">Definition and terminology</h2>
 
 <h3 id="cascade-term">Cascade reaction</h3>
@@ -303,68 +315,23 @@
 <p>The term <b>tandem reaction</b> is often used interchangeably with cascade reaction. In some contexts it emphasizes that two mechanistically distinct processes are joined in one operational sequence, regardless of whether one strictly depends on the other for initiation.<sup><a href="#ref2">[2]</a></sup></p>
 
 <h3 id="domino-term">Domino reaction</h3>
-<p>The term <b>domino reaction</b>, introduced and systematized by Tietze, specifically requires that each transformation be a direct consequence of the reactivity introduced by the previous step, analogous to the sequential fall of dominoes. Tietze's definition emphasizes that no additional reagents are added between steps and that the reaction conditions remain constant throughout the sequence.<sup><a href="#ref4">[4]</a>,<a href="#ref5">[5]</a></sup></p>
+<p>The term <b>domino reaction</b>, introduced and systematized by Tietze, specifically requires that each transformation be a direct consequence of the reactivity introduced by the previous step. Tietze's definition emphasizes that no additional reagents are added between steps and that reaction conditions remain constant throughout the sequence.<sup><a href="#ref4">[4]</a>,<a href="#ref5">[5]</a></sup></p>
 
 <h3 id="one-pot">Difference between cascade reaction and one-pot synthesis</h3>
 
-<!-- Figure 1 -->
-<div class="fig" id="fig1" aria-label="Figure 1: Cascade reaction schematic">
-  <svg viewBox="0 0 284 168" xmlns="http://www.w3.org/2000/svg" role="img"
-    aria-label="Cascade reaction schematic showing A transforming to B to C to D without intermediate isolation">
-    <rect width="284" height="168" fill="#f8f9fa" rx="3"/>
-
-    <!-- Main horizontal arrow backbone -->
-    <line x1="28" y1="76" x2="260" y2="76" stroke="#555" stroke-width="1.4"/>
-    <polygon points="258,71 268,76 258,81" fill="#555"/>
-
-    <!-- Step labels above arrow -->
-    <text x="76" y="65" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#555">step 1</text>
-    <text x="142" y="65" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#555">step 2</text>
-    <text x="208" y="65" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#555">step 3</text>
-
-    <!-- Node A -->
-    <circle cx="28" cy="76" r="18" fill="#cee0f2" stroke="#a2a9b1" stroke-width="1"/>
-    <text x="28" y="81" text-anchor="middle" font-family="Georgia" font-size="13" font-weight="bold" fill="#202122">A</text>
-
-    <!-- Node [B] -->
-    <circle cx="98" cy="76" r="18" fill="#fff9c4" stroke="#a2a9b1" stroke-width="1"/>
-    <text x="98" y="80" text-anchor="middle" font-family="Georgia" font-size="11" fill="#555">[B]</text>
-
-    <!-- Node [C] -->
-    <circle cx="168" cy="76" r="18" fill="#fff9c4" stroke="#a2a9b1" stroke-width="1"/>
-    <text x="168" y="80" text-anchor="middle" font-family="Georgia" font-size="11" fill="#555">[C]</text>
-
-    <!-- Node D -->
-    <circle cx="244" cy="76" r="18" fill="#d4edda" stroke="#a2a9b1" stroke-width="1"/>
-    <text x="244" y="81" text-anchor="middle" font-family="Georgia" font-size="13" font-weight="bold" fill="#202122">D</text>
-
-    <!-- Labels below nodes -->
-    <text x="28" y="104" text-anchor="middle" font-family="Georgia" font-size="8" fill="#555">starting</text>
-    <text x="28" y="114" text-anchor="middle" font-family="Georgia" font-size="8" fill="#555">material</text>
-
-    <text x="133" y="104" text-anchor="middle" font-family="Georgia" font-size="8" fill="#0645ad">intermediates</text>
-    <text x="133" y="114" text-anchor="middle" font-family="Georgia" font-size="8" fill="#0645ad">not isolated</text>
-
-    <text x="244" y="104" text-anchor="middle" font-family="Georgia" font-size="8" fill="#555">final</text>
-    <text x="244" y="114" text-anchor="middle" font-family="Georgia" font-size="8" fill="#555">product</text>
-
-    <!-- Brace annotation -->
-    <text x="142" y="148" text-anchor="middle" font-family="Georgia" font-size="9" fill="#333" font-style="italic">multiple transformations in one operation</text>
-  </svg>
-  <div class="fig-cap"><b>Figure 1.</b> Simplified schematic of a cascade reaction. Starting material <b>A</b> undergoes sequential transformations through reactive intermediates [B] and [C] to give final product <b>D</b>. No intermediate is isolated between steps.</div>
-  <div class="fig-src">Original schematic created for this article, based on cascade reaction principles described in Tietze (1996)<sup><a href="#ref4">[4]</a></sup> and Nicolaou et al. (2006).<sup><a href="#ref2">[2]</a></sup></div>
-</div>
-
 <div class="callout">
   <div class="callout-title">Common misconception</div>
-  A one-pot reaction is not automatically a cascade reaction. A cascade requires that events occur in a mechanistically connected sequence, usually without isolating intermediates. A one-pot synthesis may simply combine multiple independent reactions in the same vessel without mechanistic dependency between steps.
+  A one-pot reaction is not automatically a cascade reaction. A cascade requires that events occur in a mechanistically connected sequence without isolating intermediates. A one-pot synthesis may simply combine multiple independent reactions in the same vessel, with no mechanistic dependency between steps.
 </div>
 
-<p>A <b>one-pot synthesis</b> refers to a practical operation in which multiple reagents or transformations are performed in the same vessel, but it does not require that each transformation trigger the next. A cascade or domino sequence requires mechanistic continuity: the product or intermediate of one step must serve as the direct starting material for the next, under the same conditions and without additional reagent addition.<sup><a href="#ref4">[4]</a></sup></p>
+<div class="text-scheme" aria-label="Simple cascade schematic: A to B to C to D">
+  <p class="scheme-line">A &nbsp;&rarr;&nbsp; [B] &nbsp;&rarr;&nbsp; [C] &nbsp;&rarr;&nbsp; D</p>
+  <p class="scheme-note">Intermediates [B] and [C] are not isolated. Multiple transformations proceed in one operational sequence from starting material A to final product D.</p>
+</div>
 
-<!-- ═══════════════════════════════════════════════════
-     3. CLASSIFICATION
-════════════════════════════════════════════════════ -->
+<p>A <b>one-pot synthesis</b> refers to a practical operation in which multiple reagents or transformations are performed in the same vessel, but does not require that each transformation trigger the next. A cascade or domino sequence requires mechanistic continuity: the product or intermediate of one step must serve as the direct starting material for the next, under the same conditions and without additional reagent addition.<sup><a href="#ref4">[4]</a></sup></p>
+
+<!-- 3. CLASSIFICATION -->
 <h2 id="classification">Classification</h2>
 <p>Cascade reactions are broadly classified by the type of reactive intermediate or mechanistic logic that links the sequential transformations. Table 1 summarizes the principal categories recognized in the literature.<sup><a href="#ref2">[2]</a>,<a href="#ref4">[4]</a></sup></p>
 
@@ -415,130 +382,135 @@
 
 <p>Ionic cascades are among the most thoroughly studied and include carbocation-mediated polycyclizations in terpene biosynthesis and biomimetic synthesis, as well as anionic cascades that exploit aldol or Mannich-type connectivity. Radical cascades have been employed extensively in the total synthesis of natural products with complex ring systems, where radical cyclization sequences build multiple rings with defined relative stereochemistry. Pericyclic cascades exploit the predictable orbital symmetry requirements of concerted reactions—Diels–Alder cycloadditions, Cope and Claisen rearrangements—to control both connectivity and stereochemistry with high reliability.<sup><a href="#ref3">[3]</a></sup></p>
 
-<!-- ═══════════════════════════════════════════════════
-     4. ENZYMATIC CASCADE REACTIONS
-════════════════════════════════════════════════════ -->
+<!-- 4. ENZYMATIC CASCADE REACTIONS -->
 <h2 id="enzymatic">Enzymatic cascade reactions</h2>
 <p>In biosynthesis, cascade reactions are the norm rather than the exception. Multi-enzyme pathways carry out long sequences of bond-forming and bond-breaking events, and individual enzymes frequently execute cascades within their own active sites.<sup><a href="#ref1">[1]</a></sup> Enzymatic cascades are classified here by the type of chemical logic involved; a single biosynthetic pathway may involve more than one class.</p>
 
 <h3 id="nucleophilic-enz">Nucleophilic enzymatic cascades</h3>
+
+<!-- Figure 3: Pentalenene nucleophilic cascade -->
+<div class="fig" id="fig3">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Scheme_2_-_nucleo_-_pentalenene.svg"
+       alt="Reaction scheme showing a nucleophilic cascade related to pentalenene formation."
+       loading="lazy" />
+  <div class="fig-cap"><b>Figure 3.</b> Nucleophilic cascade logic in pentalenene formation. Terpene cyclizations are commonly discussed as biosynthetic cascade reactions because one reactive intermediate can trigger successive bond-forming events.</div>
+  <div class="fig-src">Image: Wikimedia Commons. Author: Xellos93. Public domain; simple structural formula. <a href="https://commons.wikimedia.org/wiki/File:Scheme_2_-_nucleo_-_pentalenene.svg">Source</a>.</div>
+</div>
+
 <p>Many biosynthetic enzymes use nucleophilic catalysis—often through covalent enzyme–substrate intermediates—to achieve multi-step transformations within a single active site. Pyridoxal-phosphate (PLP)-dependent enzymes, for instance, carry out sequential transamination, decarboxylation, and retro-aldol events, enabling the efficient synthesis of amino acid analogs and other polar small molecules.<sup><a href="#ref1">[1]</a></sup> Nucleophilic cascade logic also appears in polyketide synthase (PKS) systems, where iterative Claisen condensation events extend the growing polyketide chain with each catalytic cycle.</p>
 
 <h3 id="electrophilic-enz">Electrophilic enzymatic cascades</h3>
 <p>Terpene synthases are the most studied examples of electrophilic enzymatic cascades. These enzymes ionize a geranyl pyrophosphate or farnesyl pyrophosphate substrate to generate an allylic carbocation, which then undergoes a series of cyclizations, hydride shifts, and proton transfers—all controlled within the enzyme active site—to produce complex polycyclic terpene frameworks. The regioselectivity and stereoselectivity of each step are enforced by the shape and electrostatic environment of the active-site cavity rather than by discrete chemical conditions for each step.<sup><a href="#ref1">[1]</a></sup></p>
 
-<!-- Figure 2 -->
-<div class="fig" id="fig2" aria-label="Figure 2: Enzymatic electrophilic cascade schematic">
-  <svg viewBox="0 0 284 210" xmlns="http://www.w3.org/2000/svg" role="img"
-    aria-label="Redrawn schematic of an electrophilic enzymatic cascade in terpene biosynthesis, showing ionization, cyclization, rearrangement and deprotonation steps within one enzyme active site">
-    <rect width="284" height="210" fill="#f8f9fa" rx="3"/>
-
-    <!-- Title -->
-    <text x="142" y="17" text-anchor="middle" font-family="Georgia" font-size="10" font-weight="bold" fill="#202122">Electrophilic Enzymatic Cascade</text>
-    <text x="142" y="29" text-anchor="middle" font-family="Georgia" font-size="8" fill="#555">(terpene synthase — schematic)</text>
-
-    <!-- Boxes and arrows arranged in a simple loop -->
-    <!-- Box 1: pyrophosphate -->
-    <rect x="8" y="44" width="78" height="30" rx="3" fill="#cee0f2" stroke="#a2a9b1"/>
-    <text x="47" y="57" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">Allylic</text>
-    <text x="47" y="68" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">pyrophosphate</text>
-
-    <!-- Arrow right with label -->
-    <line x1="86" y1="59" x2="108" y2="59" stroke="#555" stroke-width="1.2"/>
-    <polygon points="106,55 114,59 106,63" fill="#555"/>
-    <text x="100" y="52" text-anchor="middle" font-family="Georgia" font-size="7.5" fill="#900">ionization</text>
-
-    <!-- Box 2: carbocation -->
-    <rect x="114" y="44" width="78" height="30" rx="3" fill="#ffe0b2" stroke="#a2a9b1"/>
-    <text x="153" y="57" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">Allylic</text>
-    <text x="153" y="68" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">carbocation</text>
-
-    <!-- Arrow down from box 2 -->
-    <line x1="153" y1="74" x2="153" y2="96" stroke="#555" stroke-width="1.2"/>
-    <polygon points="149,94 153,102 157,94" fill="#555"/>
-    <text x="172" y="89" font-family="Georgia" font-size="7.5" fill="#900">cyclization</text>
-
-    <!-- Box 3: bicyclic cation -->
-    <rect x="114" y="102" width="78" height="30" rx="3" fill="#ffe0b2" stroke="#a2a9b1"/>
-    <text x="153" y="115" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">Bicyclic</text>
-    <text x="153" y="126" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">carbocation</text>
-
-    <!-- Arrow left from box 3 -->
-    <line x1="114" y1="117" x2="90" y2="117" stroke="#555" stroke-width="1.2"/>
-    <polygon points="92,113 84,117 92,121" fill="#555"/>
-    <text x="100" y="110" text-anchor="middle" font-family="Georgia" font-size="7.5" fill="#900">1,2-shift /</text>
-    <text x="100" y="120" text-anchor="middle" font-family="Georgia" font-size="7.5" fill="#900">deproton.</text>
-
-    <!-- Box 4: product -->
-    <rect x="8" y="102" width="78" height="30" rx="3" fill="#d4edda" stroke="#a2a9b1"/>
-    <text x="47" y="115" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">Polycyclic</text>
-    <text x="47" y="126" text-anchor="middle" font-family="Georgia" font-size="8.5" fill="#202122">terpene product</text>
-
-    <!-- Note box -->
-    <rect x="8" y="150" width="268" height="50" rx="3" fill="#fff" stroke="#a2a9b1"/>
-    <text x="142" y="166" text-anchor="middle" font-family="Georgia" font-size="8" fill="#202122">Active-site geometry enforces regioselectivity and</text>
-    <text x="142" y="178" text-anchor="middle" font-family="Georgia" font-size="8" fill="#202122">stereoselectivity at each step. No intermediate is isolated.</text>
-    <text x="142" y="191" text-anchor="middle" font-family="Georgia" font-size="8" fill="#555" font-style="italic">All steps occur within a single enzyme active site.</text>
-  </svg>
-  <div class="fig-cap"><b>Figure 2.</b> Schematic of an electrophilic enzymatic cascade in terpene biosynthesis. Ionization of an allylic pyrophosphate generates a carbocation that undergoes sequential cyclization and skeletal rearrangement steps, all controlled within the enzyme active site, to yield a polycyclic terpene product.</div>
-  <div class="fig-src">Redrawn educational schematic based on Walsh and Moore (2019).<sup><a href="#ref1">[1]</a></sup> Original illustration created for this article.</div>
-</div>
-
 <h3 id="pericyclic-enz">Pericyclic enzymatic cascades</h3>
 <p>Although pericyclic reactions were long considered unlikely in enzymatic contexts, several well-characterized examples now exist. The chorismate mutase reaction—a Claisen rearrangement central to the shikimate pathway—proceeds through a chair-like transition state within the enzyme active site. More complex enzymatic Diels–Alder-like reactions have been proposed or confirmed in polyketide and terpenoid biosynthesis, though the degree of concertedness in these enzymatic transformations remains an active area of mechanistic investigation.<sup><a href="#ref1">[1]</a></sup></p>
 
 <h3 id="radical-enz">Radical enzymatic cascades</h3>
-<p>Radical <i>S</i>-adenosylmethionine (SAM) enzymes generate 5′-deoxyadenosyl radicals that initiate hydrogen-atom abstraction cascades, enabling transformations including ring formations, skeletal rearrangements, and insertion of sulfur or carbon atoms that would be difficult or impossible by ionic mechanisms.<sup><a href="#ref1">[1]</a></sup> These enzymes extend the chemical logic of cascade reactions to oxidation states and bond types that require radical intermediates.</p>
+<p>Radical <i>S</i>-adenosylmethionine (SAM) enzymes generate 5′-deoxyadenosyl radicals that initiate hydrogen-atom abstraction cascades, enabling ring formations, skeletal rearrangements, and insertion of sulfur or carbon atoms that would be difficult or impossible by ionic mechanisms.<sup><a href="#ref1">[1]</a></sup> These enzymes extend the chemical logic of cascade reactions to oxidation states and bond types that require radical intermediates.</p>
 
 <h3 id="enzyme-advantages">Why enzymes are useful in cascade reactions</h3>
 <p>Three interconnected properties make enzymes particularly effective cascade catalysts:</p>
 <ul style="padding-left:2em; margin-bottom:10px;">
   <li style="margin-bottom:4px;"><b>Active-site preorganization.</b> The enzyme active site positions the substrate and catalytic residues so that sequential reactive events occur in the correct geometry and order, minimizing side reactions without requiring protective groups or additional reagents.</li>
   <li style="margin-bottom:4px;"><b>Stereocontrol.</b> Enzymatic cascades commonly produce products with multiple stereocenters in high enantiomeric and diastereomeric excess, because the active site discriminates between substrate faces and conformations with precision that is difficult to replicate with small-molecule catalysts.</li>
-  <li style="margin-bottom:4px;"><b>Mild conditions.</b> Enzymatic cascades operate in aqueous solution near neutral pH and at moderate temperature, allowing chemically sensitive functional groups to survive that would be destroyed under harsh chemical reaction conditions.</li>
+  <li style="margin-bottom:4px;"><b>Mild conditions.</b> Enzymatic cascades operate in aqueous solution near neutral pH and at moderate temperature, allowing chemically sensitive functional groups to survive that would be destroyed under harsh conditions.</li>
 </ul>
 
-<!-- ═══════════════════════════════════════════════════
-     5. TOTAL SYNTHESIS
-════════════════════════════════════════════════════ -->
+<!-- 5. TOTAL SYNTHESIS -->
 <h2 id="total-synthesis">Cascade reactions in total synthesis</h2>
+
+<!-- Figure 2: Robinson Annulation — wide centered figure -->
+<div class="fig center" id="fig2">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Full_Basic_Mechanism_of_Robinson_Annulation.svg"
+       alt="Mechanistic scheme for the Robinson annulation under basic conditions."
+       loading="lazy" />
+  <div class="fig-cap"><b>Figure 2.</b> Basic mechanism of the Robinson annulation. The sequence combines Michael addition and aldol condensation logic, making it a useful classroom example of connected bond-forming events.</div>
+  <div class="fig-src">Image: Wikimedia Commons. Author: Ehart4. Licensed under CC BY-SA 3.0. <a href="https://commons.wikimedia.org/wiki/File:Full_Basic_Mechanism_of_Robinson_Annulation.svg">Source</a>.</div>
+</div>
 
 <p>Total synthesis has provided some of the most striking demonstrations of cascade reaction design. The central motivation is <b>step economy</b>: a well-designed cascade reduces the number of discrete synthetic operations and, consequently, the time, material, and purification burden associated with a multistep route.<sup><a href="#ref2">[2]</a>,<a href="#ref6">[6]</a></sup></p>
 
 <p>Cascade reactions in total synthesis most commonly target rapid construction of ring systems. Polycyclic natural products—terpenoids, alkaloids, steroids, and polyketides—require the formation of multiple rings and stereocenters. A cascade that installs two or more rings in a single operation directly compresses the synthetic sequence and, if properly designed, can establish multiple stereocenters simultaneously with predictable relative configuration.<sup><a href="#ref2">[2]</a></sup></p>
 
-<p>Organocatalytic cascade reactions—those using small organic molecules as catalysts—have expanded the scope of cascade synthesis considerably. Work by Enders and co-workers demonstrated triple and quadruple organocatalytic cascades that install several stereocenters in one operation using iminium and enamine activation.<sup><a href="#ref3">[3]</a></sup> Cascade logic is now considered a standard retrosynthetic strategy: identifying a cascade disconnection in a complex target is equivalent to identifying a sequence of bond formations that can be linked under compatible conditions.</p>
+<p>Organocatalytic cascade reactions—those using small organic molecules as catalysts—have expanded the scope of cascade synthesis considerably. Work by Enders and co-workers demonstrated triple and quadruple organocatalytic cascades that install several stereocenters in one operation using iminium and enamine activation modes.<sup><a href="#ref3">[3]</a></sup> Cascade logic is now considered a standard retrosynthetic strategy: identifying a cascade disconnection in a complex target is equivalent to identifying a sequence of bond formations that can be linked under compatible conditions.</p>
 
-<!-- ═══════════════════════════════════════════════════
-     6. MODULARIZATION
-════════════════════════════════════════════════════ -->
+<!-- 6. MODULARIZATION -->
 <h2 id="modular">Modularization and cascade design</h2>
 
 <p>Cascade design becomes more tractable when the overall transformation is divided into modules: defined functional-group transformations with compatible conditions that can be assembled in sequence. A modular perspective allows the synthetic chemist to ask whether a proposed cascade can be divided into sub-sequences that are each well-precedented, and whether the transition from one module to the next requires conditions that are globally compatible with all functional groups present.<sup><a href="#ref7">[7]</a></sup></p>
 
+<table class="wikitable" aria-label="Table 3: Traditional stepwise planning vs cascade-based route design">
+  <caption style="font-weight:bold; text-align:left; padding-bottom:5px;">Table 3.&ensp;Traditional stepwise planning versus cascade-based route design</caption>
+  <thead>
+    <tr>
+      <th>Consideration</th>
+      <th>Traditional stepwise planning</th>
+      <th>Cascade-based route design</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Step count</b></td>
+      <td>Each transformation is a separate, isolated operation</td>
+      <td>Multiple transformations compressed into one or few operations</td>
+    </tr>
+    <tr>
+      <td><b>Intermediate isolation</b></td>
+      <td>Each intermediate is purified and characterized</td>
+      <td>Intermediates are not isolated; identity may be inferred</td>
+    </tr>
+    <tr>
+      <td><b>Condition optimization</b></td>
+      <td>Each step optimized independently</td>
+      <td>All conditions must be globally compatible</td>
+    </tr>
+    <tr>
+      <td><b>Protecting groups</b></td>
+      <td>Frequently required to block reactive sites</td>
+      <td>Reduced when the cascade tolerates unprotected functionality</td>
+    </tr>
+    <tr>
+      <td><b>Route convergence</b></td>
+      <td>Linear or mildly convergent</td>
+      <td>Often highly convergent; rapid complexity gain</td>
+    </tr>
+    <tr>
+      <td><b>Risk distribution</b></td>
+      <td>Failures localized to a single step</td>
+      <td>Failure in any step can collapse the whole cascade</td>
+    </tr>
+  </tbody>
+</table>
+<p class="tbl-note">Table 3. Comparison of traditional stepwise synthesis planning with cascade-based route design. Neither approach is universally superior; the choice depends on the target and available chemistry.<sup><a href="#ref2">[2]</a>,<a href="#ref7">[7]</a></sup></p>
+
 <p>Modular approaches to cascade design also facilitate library synthesis. If the cascade tolerates variation in one building-block module while maintaining the overall cascade logic, a single optimized sequence can produce multiple analogs by varying the modular input—a strategy relevant to medicinal chemistry programs that require structural diversity from a common scaffold.<sup><a href="#ref7">[7]</a></sup></p>
 
-<!-- ═══════════════════════════════════════════════════
-     7. BIOMIMETIC
-════════════════════════════════════════════════════ -->
+<!-- 7. BIOMIMETIC -->
 <h2 id="biomimetic">Biomimetic cascade reactions</h2>
 
 <p>A <b>biomimetic cascade reaction</b> is one designed by analogy with a known or proposed biosynthetic pathway. The chemist uses retrosynthetic logic to identify the cascade connectivity underlying a natural product's structure and then designs laboratory conditions that replicate the key bond-forming sequence without the enzyme.<sup><a href="#ref2">[2]</a></sup></p>
 
-<p>The Stork–Eschenmoser hypothesis for steroid biosynthesis is a historically important example. Eschenmoser and Stork proposed that the polycyclic steroid skeleton could arise from the enzymatic cyclization of a squalene-derived polyene precursor via a cationic cascade, and this hypothesis was subsequently supported by biosynthetic studies as well as laboratory polycyclization reactions that mimic the process in the absence of enzyme.<sup><a href="#ref2">[2]</a></sup></p>
+<p>The Stork–Eschenmoser hypothesis for steroid biosynthesis is a historically important example. Eschenmoser and Stork proposed that the polycyclic steroid skeleton could arise from the enzymatic cyclization of a squalene-derived polyene precursor via a cationic cascade, and this hypothesis was subsequently supported by biosynthetic studies as well as laboratory polycyclization reactions that mimic the process in the absence of an enzyme.<sup><a href="#ref2">[2]</a></sup></p>
 
 <p>Biomimetic cascades in the laboratory differ from their enzymatic counterparts in several practical respects:</p>
 <ul style="padding-left:2em; margin-bottom:10px;">
-  <li style="margin-bottom:4px;">Lacking an active site, the flask-based reaction must control selectivity through substrate geometry (conformational preorganization), Lewis acid activation, or matched reagent–substrate combinations.</li>
+  <li style="margin-bottom:4px;">Lacking an active site, the flask-based reaction must control selectivity through substrate geometry, Lewis acid activation, or matched reagent–substrate combinations.</li>
   <li style="margin-bottom:4px;">Protecting groups may be required to suppress competing reactions that the enzyme avoids through substrate positioning.</li>
   <li style="margin-bottom:4px;">The reaction medium is not constrained to aqueous and mild conditions; organic solvents, strong Lewis acids, and non-ambient temperatures may be required.</li>
   <li style="margin-bottom:4px;">Stereoselectivity is generally lower than in enzymatic reactions and depends strongly on substrate substitution pattern and conformational bias.</li>
 </ul>
 
-<!-- ═══════════════════════════════════════════════════
-     8. MEDICINAL CHEMISTRY
-════════════════════════════════════════════════════ -->
+<!-- 8. MEDICINAL CHEMISTRY -->
 <h2 id="medicinal">Applications in medicinal chemistry</h2>
+
+<!-- Figure 4: Allan-Robinson -->
+<div class="fig" id="fig4">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Allan-Robinson_reaction_mechanism.png"
+       alt="Mechanistic scheme for the Allan-Robinson reaction."
+       loading="lazy" />
+  <div class="fig-cap"><b>Figure 4.</b> Mechanism scheme for the Allan–Robinson reaction. Named reactions of this type illustrate how sequential elementary steps produce ring-containing products from simple starting materials.</div>
+  <div class="fig-src">Image: Wikimedia Commons. Author: Mephisto spa. Public domain; released by copyright holder. <a href="https://commons.wikimedia.org/wiki/File:Allan-Robinson_reaction_mechanism.png">Source</a>.</div>
+</div>
 
 <p>In medicinal chemistry, cascade reactions are used primarily to assemble drug-like scaffolds efficiently and to generate libraries of natural product analogs for biological evaluation.</p>
 
@@ -552,11 +524,9 @@
 <p>Enzymatic cascades are valued for producing chiral building blocks with predictable absolute configuration. Transaminase cascades and ketoreductase cascades have been implemented industrially to produce amino acid and hydroxy acid intermediates for pharmaceutical synthesis.<sup><a href="#ref1">[1]</a></sup></p>
 
 <h4>Late-stage diversification</h4>
-<p>Cascade logic can be applied at late stages of a synthesis to diversify a common intermediate into multiple analogs—an approach termed <b>late-stage functionalization</b>. This exploits the fact that the cascade tolerates variation in peripheral functionality without disrupting the core reaction sequence.<sup><a href="#ref3">[3]</a></sup></p>
+<p>Cascade logic can be applied at late stages of a synthesis to diversify a common intermediate into multiple analogs—an approach termed <b>late-stage functionalization</b>. This exploits the fact that a cascade can tolerate variation in peripheral functionality without disrupting the core reaction sequence.<sup><a href="#ref3">[3]</a></sup></p>
 
-<!-- ═══════════════════════════════════════════════════
-     9. LIMITATIONS
-════════════════════════════════════════════════════ -->
+<!-- 9. LIMITATIONS -->
 <h2 id="limitations">Limitations</h2>
 
 <p>Despite their synthetic utility, cascade reactions present characteristic challenges that limit their applicability and require careful design.</p>
@@ -576,12 +546,10 @@
 <h4>Enzyme availability and substrate scope</h4>
 <p>For enzymatic cascades, availability of an enzyme with the required substrate scope is a practical constraint. While protein engineering can broaden substrate scope and improve stability, this requires additional effort and is not always successful.<sup><a href="#ref1">[1]</a></sup></p>
 
-<!-- ═══════════════════════════════════════════════════
-     10. CHEM 236 CONNECTION
-════════════════════════════════════════════════════ -->
+<!-- 10. CHEM 236 CONNECTION -->
 <h2 id="chem236">CHEM 236 connection</h2>
 
-<div class="chem236box">
+<div class="sidebox">
   <div class="boxtitle">Why this matters in CHEM 236</div>
   <p style="margin-bottom:6px;">Cascade reactions integrate core CHEM 236 concepts:</p>
   <ul style="padding-left:1.6em; margin-bottom:0;">
@@ -594,9 +562,7 @@
   </ul>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     11. SUMMARY
-════════════════════════════════════════════════════ -->
+<!-- 11. SUMMARY -->
 <h2 id="summary">Summary</h2>
 
 <table class="wikitable" aria-label="Table 2: Enzymatic versus flask-based synthetic cascades">
@@ -645,11 +611,9 @@
 
 <p>Cascade reactions represent a fundamental organizing principle of bond-forming chemistry, found in both biological systems and synthetic laboratories. They range from enzymatic electrophilic cyclizations that build terpene ring systems in a single active-site event, to organocatalytic multi-step sequences that install multiple stereocenters in one flask. Their common features—sequential reactivity, no intermediate isolation, and mechanistic connectivity between steps—distinguish them from one-pot reactions and give them distinct advantages in step economy and complexity generation. Their main limitations—functional-group incompatibility, competing pathways, and optimization difficulty—are addressed by careful retrosynthetic design, mechanistic analysis, and, in enzymatic systems, protein engineering.<sup><a href="#ref2">[2]</a>,<a href="#ref4">[4]</a></sup></p>
 
-<hr class="divider"/>
+<hr class="divider" />
 
-<!-- ═══════════════════════════════════════════════════
-     REFERENCES
-════════════════════════════════════════════════════ -->
+<!-- REFERENCES -->
 <h2 id="references">References</h2>
 <div class="reflist">
   <ol>
@@ -663,17 +627,40 @@
   </ol>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     MEDIA CREDITS
-════════════════════════════════════════════════════ -->
+<!-- MEDIA CREDITS -->
 <h2 id="media">Media credits</h2>
 <div class="reflist">
-  <p style="margin-bottom:8px;">Both figures in this article are original educational schematics created for this page as inline SVG diagrams. No third-party images are reproduced. The conceptual content of each figure is based on published literature as cited in the respective figure caption.</p>
   <ol>
-    <li id="mc1"><b>Figure 1</b> — "Cascade reaction schematic (A&nbsp;→&nbsp;[B]&nbsp;→&nbsp;[C]&nbsp;→&nbsp;D)." Original SVG schematic created for this article. Conceptual basis: Tietze, L. F. <i>Chem. Rev.</i> 1996, 96, 115–136; Nicolaou, K. C. et al. <i>Angew. Chem. Int. Ed.</i> 2006, 45, 7134–7186. Creator: page author. License: original work for CHEM 236 educational use.</li>
-    <li id="mc2"><b>Figure 2</b> — "Electrophilic enzymatic cascade in terpene biosynthesis (schematic)." Original SVG educational illustration created for this article. Conceptual basis: Walsh, C. T.; Moore, B. S. <i>Angew. Chem. Int. Ed.</i> 2019, 58, 6846–6879. Creator: page author. License: original work for CHEM 236 educational use.</li>
+    <li id="mc1">
+      <b>Figure 1.</b> File: <i>Diels-Alder (1,3-butadiene + ethylene) bw.svg</i>.
+      Source: <a href="https://commons.wikimedia.org/wiki/File:Diels-Alder_(1,3-butadiene_%2B_ethylene)_bw.svg">Wikimedia Commons</a>.
+      Author: Innerstream.
+      License: Public domain; simple structural formula.
+      Not modified.
+    </li>
+    <li id="mc2">
+      <b>Figure 2.</b> File: <i>Full Basic Mechanism of Robinson Annulation.svg</i>.
+      Source: <a href="https://commons.wikimedia.org/wiki/File:Full_Basic_Mechanism_of_Robinson_Annulation.svg">Wikimedia Commons</a>.
+      Author: Ehart4.
+      License: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.
+      Not modified.
+    </li>
+    <li id="mc3">
+      <b>Figure 3.</b> File: <i>Scheme 2 - nucleo - pentalenene.svg</i>.
+      Source: <a href="https://commons.wikimedia.org/wiki/File:Scheme_2_-_nucleo_-_pentalenene.svg">Wikimedia Commons</a>.
+      Author: Xellos93.
+      License: Public domain; simple structural formula.
+      Not modified.
+    </li>
+    <li id="mc4">
+      <b>Figure 4.</b> File: <i>Allan-Robinson reaction mechanism.png</i>.
+      Source: <a href="https://commons.wikimedia.org/wiki/File:Allan-Robinson_reaction_mechanism.png">Wikimedia Commons</a>.
+      Author: Mephisto spa.
+      License: Public domain; released by copyright holder.
+      Not modified.
+    </li>
   </ol>
-  <p style="margin-top:12px; font-style:italic; color:#54595d; font-size:0.9em;">This page was created as an original educational resource for CHEM 236. All text is original. All figures are original inline SVG schematics based on published literature as cited. No copyrighted third-party figures are reproduced.</p>
+  <p style="margin-top:12px; font-style:italic; color:#54595d; font-size:0.9em;">This page was created as an original educational resource for CHEM 236. All text is original. External images are sourced from Wikimedia Commons under public-domain or Creative Commons licenses as listed above. All tables and the text cascade scheme are original.</p>
 </div>
 
 </div><!-- end page-wrap -->
