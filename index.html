@@ -56,7 +56,7 @@
     p { margin-bottom: 10px; }
     ul, ol { margin-bottom: 10px; }
 
-    /* Infobox — gray header only, no blue */
+    /* Infobox — gray header only */
     .infobox {
       float: right;
       clear: right;
@@ -105,14 +105,14 @@
       margin: 12px 0 18px;
       font-size: 0.87em;
       min-width: 200px;
-      max-width: 370px;
+      max-width: 380px;
     }
     .toc-title { font-weight: bold; text-align: center; margin-bottom: 6px; }
     .toc > ol { margin: 0; padding-left: 20px; }
     .toc li { margin: 2px 0; }
     .toc ol ol { padding-left: 16px; list-style-type: decimal; }
 
-    /* Figures — float right, gray border, white/gray bg */
+    /* Figures */
     .fig {
       float: right;
       clear: right;
@@ -186,7 +186,7 @@
       margin: 3px 0 14px;
     }
 
-    /* Callout and side boxes — gray only, no yellow, no blue */
+    /* Callout and side boxes — gray only */
     .callout {
       background: #f8f9fa;
       border: 1px solid #a2a9b1;
@@ -262,10 +262,15 @@
         <li><a href="#cascade-term">Cascade reaction</a></li>
         <li><a href="#tandem-term">Tandem reaction</a></li>
         <li><a href="#domino-term">Domino reaction</a></li>
+        <li><a href="#history-term">History of terminology</a></li>
         <li><a href="#one-pot">Difference from one-pot synthesis</a></li>
       </ol>
     </li>
-    <li><a href="#classification">Classification</a></li>
+    <li><a href="#classification">Classification</a>
+      <ol>
+        <li><a href="#when-useful">When a cascade strategy is useful</a></li>
+      </ol>
+    </li>
     <li><a href="#enzymatic">Enzymatic cascade reactions</a>
       <ol>
         <li><a href="#nucleophilic-enz">Nucleophilic enzymatic cascades</a></li>
@@ -273,11 +278,13 @@
         <li><a href="#pericyclic-enz">Pericyclic enzymatic cascades</a></li>
         <li><a href="#radical-enz">Radical enzymatic cascades</a></li>
         <li><a href="#enzyme-advantages">Why enzymes are useful</a></li>
+        <li><a href="#enzyme-families">Enzyme families and reaction logic</a></li>
       </ol>
     </li>
     <li><a href="#total-synthesis">Cascade reactions in total synthesis</a></li>
     <li><a href="#modular">Modularization and cascade design</a></li>
     <li><a href="#biomimetic">Biomimetic cascade reactions</a></li>
+    <li><a href="#genome-mining">Genome mining and pathway discovery</a></li>
     <li><a href="#medicinal">Applications in medicinal chemistry</a></li>
     <li><a href="#limitations">Limitations</a></li>
     <li><a href="#chem236">CHEM 236 connection</a></li>
@@ -287,7 +294,9 @@
   </ol>
 </div>
 
-<!-- 1. OVERVIEW -->
+<!-- ═══════════════════════════════════════════
+     1. OVERVIEW
+════════════════════════════════════════════ -->
 <h2 id="overview">Overview</h2>
 
 <!-- Figure 1: Diels-Alder BW SVG -->
@@ -295,7 +304,7 @@
   <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diels-Alder_%281%2C3-butadiene_%2B_ethylene%29_bw.svg"
        alt="Reaction scheme showing 1,3-butadiene and ethylene reacting to form cyclohexene."
        loading="lazy" />
-  <div class="fig-cap"><b>Figure 1.</b> Diels–Alder reaction of 1,3-butadiene and ethylene to give cyclohexene. This reaction is a simple pericyclic example that illustrates how multiple bonds can reorganize in a single concerted step.</div>
+  <div class="fig-cap"><b>Figure 1.</b> Diels–Alder reaction of 1,3-butadiene and ethylene to give cyclohexene. This reaction is shown as a pericyclic elementary step that can appear within cascade sequences; by itself, the simple Diels–Alder reaction is not necessarily a cascade reaction.</div>
   <div class="fig-src">Image: Wikimedia Commons. Author: Innerstream. Public domain; simple structural formula. <a href="https://commons.wikimedia.org/wiki/File:Diels-Alder_(1,3-butadiene_%2B_ethylene)_bw.svg">Source</a>.</div>
 </div>
 
@@ -305,7 +314,9 @@
 
 <p>The practical consequence of a well-designed cascade is a reduction in synthetic operations: fewer isolation steps, less material loss per bond formed, and often better stereochemical outcomes because reactive intermediates are channeled directly toward the desired product rather than intercepted by competing processes.<sup><a href="#ref2">[2]</a></sup></p>
 
-<!-- 2. DEFINITION AND TERMINOLOGY -->
+<!-- ═══════════════════════════════════════════
+     2. DEFINITION AND TERMINOLOGY
+════════════════════════════════════════════ -->
 <h2 id="definition">Definition and terminology</h2>
 
 <h3 id="cascade-term">Cascade reaction</h3>
@@ -316,6 +327,10 @@
 
 <h3 id="domino-term">Domino reaction</h3>
 <p>The term <b>domino reaction</b>, introduced and systematized by Tietze, specifically requires that each transformation be a direct consequence of the reactivity introduced by the previous step. Tietze's definition emphasizes that no additional reagents are added between steps and that reaction conditions remain constant throughout the sequence.<sup><a href="#ref4">[4]</a>,<a href="#ref5">[5]</a></sup></p>
+
+<h3 id="history-term">History of terminology</h3>
+<p>The terminology surrounding cascade, tandem, and domino reactions is not completely uniform in the chemical literature, and usage has evolved as the scope of each concept expanded. Authors frequently employ these three terms interchangeably, particularly in the context of multi-step sequences that are performed without intermediate isolation. Tietze's systematic codification of the <i>domino reaction</i> as a mechanistically connected sequence proceeding under constant conditions and without added reagents remains the most rigorous formulation, and it distinguished domino processes from sequential one-pot reactions in which reagents are added stepwise.<sup><a href="#ref4">[4]</a>,<a href="#ref5">[5]</a></sup></p>
+<p>The term "cascade" is frequently preferred in biosynthetic and enzymological contexts, where sequential enzyme-catalyzed reactions build molecular complexity in a single metabolic pathway. "Tandem" is common in the organocatalysis and transition-metal catalysis literature. Despite these tendencies, all three terms appear across the synthetic and biological literature, and the intended meaning is usually clarified by context.</p>
 
 <h3 id="one-pot">Difference between cascade reaction and one-pot synthesis</h3>
 
@@ -331,7 +346,9 @@
 
 <p>A <b>one-pot synthesis</b> refers to a practical operation in which multiple reagents or transformations are performed in the same vessel, but does not require that each transformation trigger the next. A cascade or domino sequence requires mechanistic continuity: the product or intermediate of one step must serve as the direct starting material for the next, under the same conditions and without additional reagent addition.<sup><a href="#ref4">[4]</a></sup></p>
 
-<!-- 3. CLASSIFICATION -->
+<!-- ═══════════════════════════════════════════
+     3. CLASSIFICATION
+════════════════════════════════════════════ -->
 <h2 id="classification">Classification</h2>
 <p>Cascade reactions are broadly classified by the type of reactive intermediate or mechanistic logic that links the sequential transformations. Table 1 summarizes the principal categories recognized in the literature.<sup><a href="#ref2">[2]</a>,<a href="#ref4">[4]</a></sup></p>
 
@@ -382,7 +399,49 @@
 
 <p>Ionic cascades are among the most thoroughly studied and include carbocation-mediated polycyclizations in terpene biosynthesis and biomimetic synthesis, as well as anionic cascades that exploit aldol or Mannich-type connectivity. Radical cascades have been employed extensively in the total synthesis of natural products with complex ring systems, where radical cyclization sequences build multiple rings with defined relative stereochemistry. Pericyclic cascades exploit the predictable orbital symmetry requirements of concerted reactions—Diels–Alder cycloadditions, Cope and Claisen rearrangements—to control both connectivity and stereochemistry with high reliability.<sup><a href="#ref3">[3]</a></sup></p>
 
-<!-- 4. ENZYMATIC CASCADE REACTIONS -->
+<h3 id="when-useful">When a cascade strategy is useful</h3>
+<p>The decision to pursue a cascade route rather than a stepwise approach involves weighing the compatibility of the required conditions, the stability of intermediates, and the feasibility of purification after a multi-step sequence. A cascade is most advantageous when multiple bond-forming events share compatible conditions and when isolation of intermediates would result in significant material loss or is impractical. Stepwise synthesis is generally safer when individual steps require incompatible conditions or when characterization of each intermediate is needed to manage selectivity.<sup><a href="#ref2">[2]</a>,<a href="#ref4">[4]</a></sup></p>
+
+<table class="wikitable" aria-label="Table 4: When to use or avoid cascade strategy">
+  <caption style="font-weight:bold; text-align:left; padding-bottom:5px;">Table 4.&ensp;Cascade strategy: considerations for use</caption>
+  <thead>
+    <tr>
+      <th>Favor cascade when…</th>
+      <th>Favor stepwise approach when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A reactive intermediate is too unstable or hazardous to isolate</td>
+      <td>Each intermediate requires full spectroscopic characterization before proceeding</td>
+    </tr>
+    <tr>
+      <td>All steps proceed under compatible conditions (temperature, pH, solvent)</td>
+      <td>Steps require mutually incompatible conditions (e.g., strongly acidic then strongly basic)</td>
+    </tr>
+    <tr>
+      <td>Isolation losses at intermediate stages would substantially reduce overall yield</td>
+      <td>Low selectivity at one step would contaminate subsequent steps and complicate purification</td>
+    </tr>
+    <tr>
+      <td>Each step produces the structural feature required to initiate the next transformation</td>
+      <td>Side reactions at one step would be carried through and amplified at later stages</td>
+    </tr>
+    <tr>
+      <td>Step count is a practical bottleneck due to time, material, or chromatographic constraints</td>
+      <td>Scale-up behavior of a key step is not well characterized, posing selectivity risk</td>
+    </tr>
+    <tr>
+      <td>Conformational preorganization of the substrate enforces selectivity across multiple steps</td>
+      <td>Multiple diastereomeric products are expected and cannot be separated after the cascade</td>
+    </tr>
+  </tbody>
+</table>
+<p class="tbl-note">Table 4. Practical considerations for choosing between cascade and stepwise routes. Neither strategy is universally superior; the optimal choice depends on the target structure, available chemistry, and process requirements.<sup><a href="#ref2">[2]</a>,<a href="#ref4">[4]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════
+     4. ENZYMATIC CASCADE REACTIONS
+════════════════════════════════════════════ -->
 <h2 id="enzymatic">Enzymatic cascade reactions</h2>
 <p>In biosynthesis, cascade reactions are the norm rather than the exception. Multi-enzyme pathways carry out long sequences of bond-forming and bond-breaking events, and individual enzymes frequently execute cascades within their own active sites.<sup><a href="#ref1">[1]</a></sup> Enzymatic cascades are classified here by the type of chemical logic involved; a single biosynthetic pathway may involve more than one class.</p>
 
@@ -397,7 +456,7 @@
   <div class="fig-src">Image: Wikimedia Commons. Author: Xellos93. Public domain; simple structural formula. <a href="https://commons.wikimedia.org/wiki/File:Scheme_2_-_nucleo_-_pentalenene.svg">Source</a>.</div>
 </div>
 
-<p>Many biosynthetic enzymes use nucleophilic catalysis—often through covalent enzyme–substrate intermediates—to achieve multi-step transformations within a single active site. Pyridoxal-phosphate (PLP)-dependent enzymes, for instance, carry out sequential transamination, decarboxylation, and retro-aldol events, enabling the efficient synthesis of amino acid analogs and other polar small molecules.<sup><a href="#ref1">[1]</a></sup> Nucleophilic cascade logic also appears in polyketide synthase (PKS) systems, where iterative Claisen condensation events extend the growing polyketide chain with each catalytic cycle.</p>
+<p>Many biosynthetic enzymes use nucleophilic catalysis—often through covalent enzyme–substrate intermediates—to achieve multi-step transformations within a single active site. Pyridoxal-phosphate (PLP)-dependent enzymes carry out sequential transamination, decarboxylation, and retro-aldol events, enabling the efficient synthesis of amino acid analogs and other polar small molecules.<sup><a href="#ref1">[1]</a></sup> Nucleophilic cascade logic also appears in polyketide synthase (PKS) systems, where iterative Claisen condensation events extend the growing polyketide chain with each catalytic cycle.</p>
 
 <h3 id="electrophilic-enz">Electrophilic enzymatic cascades</h3>
 <p>Terpene synthases are the most studied examples of electrophilic enzymatic cascades. These enzymes ionize a geranyl pyrophosphate or farnesyl pyrophosphate substrate to generate an allylic carbocation, which then undergoes a series of cyclizations, hydride shifts, and proton transfers—all controlled within the enzyme active site—to produce complex polycyclic terpene frameworks. The regioselectivity and stereoselectivity of each step are enforced by the shape and electrostatic environment of the active-site cavity rather than by discrete chemical conditions for each step.<sup><a href="#ref1">[1]</a></sup></p>
@@ -416,155 +475,7 @@
   <li style="margin-bottom:4px;"><b>Mild conditions.</b> Enzymatic cascades operate in aqueous solution near neutral pH and at moderate temperature, allowing chemically sensitive functional groups to survive that would be destroyed under harsh conditions.</li>
 </ul>
 
-<!-- 5. TOTAL SYNTHESIS -->
-<h2 id="total-synthesis">Cascade reactions in total synthesis</h2>
-
-<!-- Figure 2: Robinson Annulation — wide centered figure -->
-<div class="fig center" id="fig2">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Full_Basic_Mechanism_of_Robinson_Annulation.svg"
-       alt="Mechanistic scheme for the Robinson annulation under basic conditions."
-       loading="lazy" />
-  <div class="fig-cap"><b>Figure 2.</b> Basic mechanism of the Robinson annulation. The sequence combines Michael addition and aldol condensation logic, making it a useful classroom example of connected bond-forming events.</div>
-  <div class="fig-src">Image: Wikimedia Commons. Author: Ehart4. Licensed under CC BY-SA 3.0. <a href="https://commons.wikimedia.org/wiki/File:Full_Basic_Mechanism_of_Robinson_Annulation.svg">Source</a>.</div>
-</div>
-
-<p>Total synthesis has provided some of the most striking demonstrations of cascade reaction design. The central motivation is <b>step economy</b>: a well-designed cascade reduces the number of discrete synthetic operations and, consequently, the time, material, and purification burden associated with a multistep route.<sup><a href="#ref2">[2]</a>,<a href="#ref6">[6]</a></sup></p>
-
-<p>Cascade reactions in total synthesis most commonly target rapid construction of ring systems. Polycyclic natural products—terpenoids, alkaloids, steroids, and polyketides—require the formation of multiple rings and stereocenters. A cascade that installs two or more rings in a single operation directly compresses the synthetic sequence and, if properly designed, can establish multiple stereocenters simultaneously with predictable relative configuration.<sup><a href="#ref2">[2]</a></sup></p>
-
-<p>Organocatalytic cascade reactions—those using small organic molecules as catalysts—have expanded the scope of cascade synthesis considerably. Work by Enders and co-workers demonstrated triple and quadruple organocatalytic cascades that install several stereocenters in one operation using iminium and enamine activation modes.<sup><a href="#ref3">[3]</a></sup> Cascade logic is now considered a standard retrosynthetic strategy: identifying a cascade disconnection in a complex target is equivalent to identifying a sequence of bond formations that can be linked under compatible conditions.</p>
-
-<!-- 6. MODULARIZATION -->
-<h2 id="modular">Modularization and cascade design</h2>
-
-<p>Cascade design becomes more tractable when the overall transformation is divided into modules: defined functional-group transformations with compatible conditions that can be assembled in sequence. A modular perspective allows the synthetic chemist to ask whether a proposed cascade can be divided into sub-sequences that are each well-precedented, and whether the transition from one module to the next requires conditions that are globally compatible with all functional groups present.<sup><a href="#ref7">[7]</a></sup></p>
-
-<table class="wikitable" aria-label="Table 3: Traditional stepwise planning vs cascade-based route design">
-  <caption style="font-weight:bold; text-align:left; padding-bottom:5px;">Table 3.&ensp;Traditional stepwise planning versus cascade-based route design</caption>
-  <thead>
-    <tr>
-      <th>Consideration</th>
-      <th>Traditional stepwise planning</th>
-      <th>Cascade-based route design</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Step count</b></td>
-      <td>Each transformation is a separate, isolated operation</td>
-      <td>Multiple transformations compressed into one or few operations</td>
-    </tr>
-    <tr>
-      <td><b>Intermediate isolation</b></td>
-      <td>Each intermediate is purified and characterized</td>
-      <td>Intermediates are not isolated; identity may be inferred</td>
-    </tr>
-    <tr>
-      <td><b>Condition optimization</b></td>
-      <td>Each step optimized independently</td>
-      <td>All conditions must be globally compatible</td>
-    </tr>
-    <tr>
-      <td><b>Protecting groups</b></td>
-      <td>Frequently required to block reactive sites</td>
-      <td>Reduced when the cascade tolerates unprotected functionality</td>
-    </tr>
-    <tr>
-      <td><b>Route convergence</b></td>
-      <td>Linear or mildly convergent</td>
-      <td>Often highly convergent; rapid complexity gain</td>
-    </tr>
-    <tr>
-      <td><b>Risk distribution</b></td>
-      <td>Failures localized to a single step</td>
-      <td>Failure in any step can collapse the whole cascade</td>
-    </tr>
-  </tbody>
-</table>
-<p class="tbl-note">Table 3. Comparison of traditional stepwise synthesis planning with cascade-based route design. Neither approach is universally superior; the choice depends on the target and available chemistry.<sup><a href="#ref2">[2]</a>,<a href="#ref7">[7]</a></sup></p>
-
-<p>Modular approaches to cascade design also facilitate library synthesis. If the cascade tolerates variation in one building-block module while maintaining the overall cascade logic, a single optimized sequence can produce multiple analogs by varying the modular input—a strategy relevant to medicinal chemistry programs that require structural diversity from a common scaffold.<sup><a href="#ref7">[7]</a></sup></p>
-
-<!-- 7. BIOMIMETIC -->
-<h2 id="biomimetic">Biomimetic cascade reactions</h2>
-
-<p>A <b>biomimetic cascade reaction</b> is one designed by analogy with a known or proposed biosynthetic pathway. The chemist uses retrosynthetic logic to identify the cascade connectivity underlying a natural product's structure and then designs laboratory conditions that replicate the key bond-forming sequence without the enzyme.<sup><a href="#ref2">[2]</a></sup></p>
-
-<p>The Stork–Eschenmoser hypothesis for steroid biosynthesis is a historically important example. Eschenmoser and Stork proposed that the polycyclic steroid skeleton could arise from the enzymatic cyclization of a squalene-derived polyene precursor via a cationic cascade, and this hypothesis was subsequently supported by biosynthetic studies as well as laboratory polycyclization reactions that mimic the process in the absence of an enzyme.<sup><a href="#ref2">[2]</a></sup></p>
-
-<p>Biomimetic cascades in the laboratory differ from their enzymatic counterparts in several practical respects:</p>
-<ul style="padding-left:2em; margin-bottom:10px;">
-  <li style="margin-bottom:4px;">Lacking an active site, the flask-based reaction must control selectivity through substrate geometry, Lewis acid activation, or matched reagent–substrate combinations.</li>
-  <li style="margin-bottom:4px;">Protecting groups may be required to suppress competing reactions that the enzyme avoids through substrate positioning.</li>
-  <li style="margin-bottom:4px;">The reaction medium is not constrained to aqueous and mild conditions; organic solvents, strong Lewis acids, and non-ambient temperatures may be required.</li>
-  <li style="margin-bottom:4px;">Stereoselectivity is generally lower than in enzymatic reactions and depends strongly on substrate substitution pattern and conformational bias.</li>
-</ul>
-
-<!-- 8. MEDICINAL CHEMISTRY -->
-<h2 id="medicinal">Applications in medicinal chemistry</h2>
-
-<!-- Figure 4: Allan-Robinson -->
-<div class="fig" id="fig4">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Allan-Robinson_reaction_mechanism.png"
-       alt="Mechanistic scheme for the Allan-Robinson reaction."
-       loading="lazy" />
-  <div class="fig-cap"><b>Figure 4.</b> Mechanism scheme for the Allan–Robinson reaction. Named reactions of this type illustrate how sequential elementary steps produce ring-containing products from simple starting materials.</div>
-  <div class="fig-src">Image: Wikimedia Commons. Author: Mephisto spa. Public domain; released by copyright holder. <a href="https://commons.wikimedia.org/wiki/File:Allan-Robinson_reaction_mechanism.png">Source</a>.</div>
-</div>
-
-<p>In medicinal chemistry, cascade reactions are used primarily to assemble drug-like scaffolds efficiently and to generate libraries of natural product analogs for biological evaluation.</p>
-
-<h4>Drug-like scaffolds</h4>
-<p>Polycyclic scaffolds found in many drugs—steroids, terpenoids, and alkaloid-derived frameworks—are accessible by cascade routes. When the cascade installs multiple stereocenters simultaneously, it can produce a single diastereomer or a limited set of diastereomers, reducing the burden of downstream resolution or asymmetric synthesis.<sup><a href="#ref3">[3]</a></sup></p>
-
-<h4>Natural product analogs</h4>
-<p>Natural products are a historically important source of drug leads, but their structural complexity often makes direct use impractical. Cascade strategies allow synthesis of simplified analogs that retain the core pharmacophore while being more accessible and amenable to structural modification.<sup><a href="#ref6">[6]</a></sup></p>
-
-<h4>Chiral building blocks</h4>
-<p>Enzymatic cascades are valued for producing chiral building blocks with predictable absolute configuration. Transaminase cascades and ketoreductase cascades have been implemented industrially to produce amino acid and hydroxy acid intermediates for pharmaceutical synthesis.<sup><a href="#ref1">[1]</a></sup></p>
-
-<h4>Late-stage diversification</h4>
-<p>Cascade logic can be applied at late stages of a synthesis to diversify a common intermediate into multiple analogs—an approach termed <b>late-stage functionalization</b>. This exploits the fact that a cascade can tolerate variation in peripheral functionality without disrupting the core reaction sequence.<sup><a href="#ref3">[3]</a></sup></p>
-
-<!-- 9. LIMITATIONS -->
-<h2 id="limitations">Limitations</h2>
-
-<p>Despite their synthetic utility, cascade reactions present characteristic challenges that limit their applicability and require careful design.</p>
-
-<h4>Competing pathways</h4>
-<p>Because reactive intermediates are not isolated, any intermediate can potentially react through an unintended pathway. Carbocation intermediates in cationic cascades, for example, can rearrange, be trapped by nucleophiles, or undergo elimination before the intended cyclization occurs.<sup><a href="#ref2">[2]</a></sup></p>
-
-<h4>Functional-group incompatibility</h4>
-<p>A cascade that requires strongly acidic conditions in one step is incompatible with base-sensitive functional groups present at the same stage. This is a fundamental constraint: all conditions must be globally compatible with all functional groups present throughout the cascade.<sup><a href="#ref4">[4]</a></sup></p>
-
-<h4>Difficulty identifying intermediates</h4>
-<p>Because intermediates are not isolated, spectroscopic characterization of each transformation is difficult under cascade conditions. Mechanistic assignments often rely on computational modeling, isotope-labeling experiments, or the use of model substrates designed to halt the cascade at a defined step.<sup><a href="#ref2">[2]</a></sup></p>
-
-<h4>Scale-up challenges</h4>
-<p>Cascade reactions optimized on milligram scale in discovery settings may not perform equivalently at larger scale. Differences in heat transfer, mixing, and local reagent concentration can alter the selectivity of competing steps, making process development for cascade routes technically demanding.</p>
-
-<h4>Enzyme availability and substrate scope</h4>
-<p>For enzymatic cascades, availability of an enzyme with the required substrate scope is a practical constraint. While protein engineering can broaden substrate scope and improve stability, this requires additional effort and is not always successful.<sup><a href="#ref1">[1]</a></sup></p>
-
-<!-- 10. CHEM 236 CONNECTION -->
-<h2 id="chem236">CHEM 236 connection</h2>
-
-<div class="sidebox">
-  <div class="boxtitle">Why this matters in CHEM 236</div>
-  <p style="margin-bottom:6px;">Cascade reactions integrate core CHEM 236 concepts:</p>
-  <ul style="padding-left:1.6em; margin-bottom:0;">
-    <li style="margin-bottom:4px;"><b>Mechanism.</b> Every step in a cascade proceeds through a defined mechanistic pathway—carbocation, enolate, radical, or pericyclic—and must be mechanistically justified.</li>
-    <li style="margin-bottom:4px;"><b>Selectivity.</b> Chemoselectivity, regioselectivity, and stereoselectivity determine whether the cascade delivers the desired product or a mixture of byproducts.</li>
-    <li style="margin-bottom:4px;"><b>Functional-group compatibility.</b> Cascade design requires knowing which functional groups survive—and which do not—under the conditions required at each step.</li>
-    <li style="margin-bottom:4px;"><b>Retrosynthesis.</b> Identifying cascade disconnections in a complex molecule is a key retrosynthetic skill; it requires recognizing when multiple bonds in the target could have formed in a single sequential operation.</li>
-    <li style="margin-bottom:4px;"><b>Catalysis.</b> Both enzymatic and non-enzymatic cascades depend on catalysts for selectivity; understanding what the catalyst does at each step is central to understanding why the cascade works.</li>
-    <li style="margin-bottom:4px;"><b>Medicinal chemistry context.</b> Many drug scaffolds are cascade-derived; knowing how they are made illuminates structure–activity relationships and the practical limits of analog synthesis.</li>
-  </ul>
-</div>
-
-<!-- 11. SUMMARY -->
-<h2 id="summary">Summary</h2>
-
+<!-- Table 2: Enzymatic vs synthetic (moved here from Summary) -->
 <table class="wikitable" aria-label="Table 2: Enzymatic versus flask-based synthetic cascades">
   <caption style="font-weight:bold; text-align:left; padding-bottom:5px;">Table 2.&ensp;Enzymatic versus flask-based synthetic cascades</caption>
   <thead>
@@ -609,11 +520,273 @@
 </table>
 <p class="tbl-note">Table 2. Comparison of enzymatic and flask-based synthetic cascades across key practical features.<sup><a href="#ref1">[1]</a>,<a href="#ref2">[2]</a></sup></p>
 
-<p>Cascade reactions represent a fundamental organizing principle of bond-forming chemistry, found in both biological systems and synthetic laboratories. They range from enzymatic electrophilic cyclizations that build terpene ring systems in a single active-site event, to organocatalytic multi-step sequences that install multiple stereocenters in one flask. Their common features—sequential reactivity, no intermediate isolation, and mechanistic connectivity between steps—distinguish them from one-pot reactions and give them distinct advantages in step economy and complexity generation. Their main limitations—functional-group incompatibility, competing pathways, and optimization difficulty—are addressed by careful retrosynthetic design, mechanistic analysis, and, in enzymatic systems, protein engineering.<sup><a href="#ref2">[2]</a>,<a href="#ref4">[4]</a></sup></p>
+<h3 id="enzyme-families">Enzyme families and reaction logic</h3>
+<p>Several well-studied enzyme families execute cascade-type reactions within biosynthetic pathways. Each family is associated with a characteristic mechanistic logic and produces a recognizable class of natural-product scaffolds.<sup><a href="#ref1">[1]</a></sup></p>
+
+<table class="wikitable" aria-label="Table 5: Enzyme families and cascade reaction logic">
+  <caption style="font-weight:bold; text-align:left; padding-bottom:5px;">Table 5.&ensp;Enzyme families and cascade reaction logic in biosynthesis</caption>
+  <thead>
+    <tr>
+      <th>Enzyme family</th>
+      <th>Mechanistic logic</th>
+      <th>Key cascade-type reactions</th>
+      <th>Product class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Terpene synthases</b></td>
+      <td>Electrophilic / cationic</td>
+      <td>Allylic carbocation cyclizations, hydride shifts, proton transfers</td>
+      <td>Polycyclic terpene skeletons (mono-, sesqui-, di-, triterpenes)</td>
+    </tr>
+    <tr>
+      <td><b>Polyketide synthases (PKS)</b></td>
+      <td>Nucleophilic acyl-transfer / Claisen condensation</td>
+      <td>Iterative chain extension; cyclization of the extended polyketide</td>
+      <td>Polyketide natural-product scaffolds (macrolides, polyenes, aromatic polyketides)</td>
+    </tr>
+    <tr>
+      <td><b>PLP-dependent enzymes</b></td>
+      <td>Nucleophilic and electrophilic (PLP as cofactor)</td>
+      <td>Transamination, decarboxylation, retro-aldol, and racemization sequences</td>
+      <td>Amino acids, β-amino acids, and related polar intermediates</td>
+    </tr>
+    <tr>
+      <td><b>Radical SAM enzymes</b></td>
+      <td>Radical (hydrogen-atom abstraction)</td>
+      <td>5′-Deoxyadenosyl radical initiation, skeletal rearrangements, ring formations</td>
+      <td>Structurally diverse radical-derived products; complex ring systems</td>
+    </tr>
+    <tr>
+      <td><b>Pericyclases / Diels–Alderases</b></td>
+      <td>Pericyclic (proposed concerted or stepwise)</td>
+      <td>Enzymatic cycloaddition or rearrangement-like steps; Diels–Alder-type ring closure</td>
+      <td>Polycyclic ring systems in natural products; spirocyclic scaffolds</td>
+    </tr>
+  </tbody>
+</table>
+<p class="tbl-note">Table 5. Major enzyme families that execute cascade-type reactions in biosynthesis, classified by mechanistic logic. The boundaries between categories are not always sharp; some enzymes combine more than one mechanistic type.<sup><a href="#ref1">[1]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════
+     5. TOTAL SYNTHESIS
+════════════════════════════════════════════ -->
+<h2 id="total-synthesis">Cascade reactions in total synthesis</h2>
+
+<!-- Figure 2: Robinson Annulation — wide centered figure -->
+<div class="fig center" id="fig2">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Full_Basic_Mechanism_of_Robinson_Annulation.svg"
+       alt="Mechanistic scheme for the Robinson annulation under basic conditions."
+       loading="lazy" />
+  <div class="fig-cap"><b>Figure 2.</b> Basic mechanism of the Robinson annulation. The sequence combines Michael addition and aldol condensation logic, making it a useful classroom example of connected bond-forming events.</div>
+  <div class="fig-src">Image: Wikimedia Commons. Author: Ehart4. Licensed under CC BY-SA 3.0. <a href="https://commons.wikimedia.org/wiki/File:Full_Basic_Mechanism_of_Robinson_Annulation.svg">Source</a>.</div>
+</div>
+
+<p>Total synthesis has provided some of the most striking demonstrations of cascade reaction design. The central motivation is <b>step economy</b>: a well-designed cascade reduces the number of discrete synthetic operations and, consequently, the time, material, and purification burden associated with a multistep route.<sup><a href="#ref2">[2]</a>,<a href="#ref6">[6]</a></sup></p>
+
+<p>Cascade reactions in total synthesis most commonly target rapid construction of ring systems. Polycyclic natural products—terpenoids, alkaloids, steroids, and polyketides—require the formation of multiple rings and stereocenters. A cascade that installs two or more rings in a single operation directly compresses the synthetic sequence and, if properly designed, can establish multiple stereocenters simultaneously with predictable relative configuration.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>Organocatalytic cascade reactions—those using small organic molecules as catalysts—have expanded the scope of cascade synthesis considerably. Work by Enders and co-workers demonstrated triple and quadruple organocatalytic cascades that install several stereocenters in one operation using iminium and enamine activation modes.<sup><a href="#ref3">[3]</a></sup> Cascade logic is now considered a standard retrosynthetic strategy: identifying a cascade disconnection in a complex target is equivalent to identifying a sequence of bond formations that can be linked under compatible conditions.</p>
+
+<!-- ═══════════════════════════════════════════
+     6. MODULARIZATION
+════════════════════════════════════════════ -->
+<h2 id="modular">Modularization and cascade design</h2>
+
+<p>Cascade design becomes more tractable when the overall transformation is divided into modules: defined functional-group transformations with compatible conditions that can be assembled in sequence. A modular perspective allows the synthetic chemist to ask whether a proposed cascade can be divided into sub-sequences that are each well-precedented, and whether the transition from one module to the next requires conditions that are globally compatible with all functional groups present.<sup><a href="#ref7">[7]</a>,<a href="#ref8">[8]</a></sup></p>
+
+<table class="wikitable" aria-label="Table 3: Traditional stepwise planning vs cascade-based route design">
+  <caption style="font-weight:bold; text-align:left; padding-bottom:5px;">Table 3.&ensp;Traditional stepwise planning versus cascade-based route design</caption>
+  <thead>
+    <tr>
+      <th>Consideration</th>
+      <th>Traditional stepwise planning</th>
+      <th>Cascade-based route design</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Step count</b></td>
+      <td>Each transformation is a separate, isolated operation</td>
+      <td>Multiple transformations compressed into one or few operations</td>
+    </tr>
+    <tr>
+      <td><b>Intermediate isolation</b></td>
+      <td>Each intermediate is purified and characterized</td>
+      <td>Intermediates are not isolated; identity may be inferred</td>
+    </tr>
+    <tr>
+      <td><b>Condition optimization</b></td>
+      <td>Each step optimized independently</td>
+      <td>All conditions must be globally compatible</td>
+    </tr>
+    <tr>
+      <td><b>Protecting groups</b></td>
+      <td>Frequently required to block reactive sites</td>
+      <td>Reduced when the cascade tolerates unprotected functionality</td>
+    </tr>
+    <tr>
+      <td><b>Route convergence</b></td>
+      <td>Linear or mildly convergent</td>
+      <td>Often highly convergent; rapid complexity gain</td>
+    </tr>
+    <tr>
+      <td><b>Risk distribution</b></td>
+      <td>Failures localized to a single step</td>
+      <td>Failure in any step can collapse the whole cascade</td>
+    </tr>
+  </tbody>
+</table>
+<p class="tbl-note">Table 3. Comparison of traditional stepwise synthesis planning with cascade-based route design. Neither approach is universally superior; the choice depends on the target structure and available chemistry.<sup><a href="#ref2">[2]</a>,<a href="#ref7">[7]</a></sup></p>
+
+<p>Modular approaches to cascade design also facilitate library synthesis. If the cascade tolerates variation in one building-block module while maintaining the overall cascade logic, a single optimized sequence can produce multiple analogs by varying the modular input—a strategy relevant to medicinal chemistry programs that require structural diversity from a common scaffold.<sup><a href="#ref7">[7]</a>,<a href="#ref8">[8]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════
+     7. BIOMIMETIC
+════════════════════════════════════════════ -->
+<h2 id="biomimetic">Biomimetic cascade reactions</h2>
+
+<p>A <b>biomimetic cascade reaction</b> is one designed by analogy with a known or proposed biosynthetic pathway. The chemist uses retrosynthetic logic to identify the cascade connectivity underlying a natural product's structure and then designs laboratory conditions that replicate the key bond-forming sequence without the enzyme.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>The Stork–Eschenmoser hypothesis for steroid biosynthesis is a historically important example. Eschenmoser and Stork proposed that the polycyclic steroid skeleton could arise from the enzymatic cyclization of a squalene-derived polyene precursor via a cationic cascade, and this hypothesis was subsequently supported by biosynthetic studies as well as laboratory polycyclization reactions that mimic the process in the absence of an enzyme.<sup><a href="#ref2">[2]</a></sup></p>
+
+<p>Biomimetic cascades in the laboratory differ from their enzymatic counterparts in several practical respects:</p>
+<ul style="padding-left:2em; margin-bottom:10px;">
+  <li style="margin-bottom:4px;">Lacking an active site, the flask-based reaction must control selectivity through substrate geometry, Lewis acid activation, or matched reagent–substrate combinations.</li>
+  <li style="margin-bottom:4px;">Protecting groups may be required to suppress competing reactions that the enzyme avoids through substrate positioning.</li>
+  <li style="margin-bottom:4px;">The reaction medium is not constrained to aqueous and mild conditions; organic solvents, strong Lewis acids, and non-ambient temperatures may be required.</li>
+  <li style="margin-bottom:4px;">Stereoselectivity is generally lower than in enzymatic reactions and depends strongly on substrate substitution pattern and conformational bias.</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════
+     8. GENOME MINING AND PATHWAY DISCOVERY
+════════════════════════════════════════════ -->
+<h2 id="genome-mining">Genome mining and pathway discovery</h2>
+
+<p>Genome sequencing and bioinformatics have substantially broadened the discovery of enzymatic cascade pathways. The identification of <b>biosynthetic gene clusters</b> (BGCs)—co-located groups of genes encoding the enzymes responsible for producing a secondary metabolite—allows researchers to predict and then characterize new enzymatic cascade sequences without first isolating the natural product.<sup><a href="#ref1">[1]</a></sup> Computational tools such as antiSMASH and BiG-SCAPE can scan microbial or plant genome sequences, identify BGCs, and classify them by predicted enzymatic logic (terpene, polyketide, non-ribosomal peptide, and others).</p>
+
+<p>Genome mining sits at the intersection of organic synthesis, enzymology, bioinformatics, and natural-product chemistry. A BGC encoding a terpene synthase alongside oxidative tailoring enzymes predicts a biosynthetic pathway involving cationic cyclization cascades followed by functionalization steps. Knowledge of this predicted cascade logic can guide the design of biomimetic synthetic routes that replicate the key bond-forming events in the laboratory using available reagents and catalysts.<sup><a href="#ref1">[1]</a>,<a href="#ref2">[2]</a></sup></p>
+
+<p>From a cascade design perspective, genome mining provides retrosynthetic information: by reading the gene cluster, chemists can infer the order and type of bond-forming events, the number of enzymatic steps, and the likely stereochemical outcome at each stage. This information is useful both for designing total synthesis routes and for identifying enzymes that can be recruited into biocatalytic cascade processes.</p>
+
+<!-- ═══════════════════════════════════════════
+     9. MEDICINAL CHEMISTRY
+════════════════════════════════════════════ -->
+<h2 id="medicinal">Applications in medicinal chemistry</h2>
+
+<!-- Figure 4: Allan-Robinson -->
+<div class="fig" id="fig4">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Allan-Robinson_reaction_mechanism.png"
+       alt="Mechanistic scheme for the Allan-Robinson reaction."
+       loading="lazy" />
+  <div class="fig-cap"><b>Figure 4.</b> Mechanism scheme for the Allan–Robinson reaction. Named reactions of this type illustrate how sequential elementary steps produce ring-containing products from simple starting materials.</div>
+  <div class="fig-src">Image: Wikimedia Commons. Author: Mephisto spa. Public domain; released by copyright holder. <a href="https://commons.wikimedia.org/wiki/File:Allan-Robinson_reaction_mechanism.png">Source</a>.</div>
+</div>
+
+<p>In medicinal chemistry, cascade reactions represent one strategy—among several—for assembling structurally complex scaffolds efficiently and for generating libraries of natural product analogs. The relevance of cascade approaches depends on the specific target structure; not all drug-like scaffolds are accessible or best prepared by cascade methods, and cascade reactions are not uniformly superior to stepwise synthesis in a medicinal chemistry context.</p>
+
+<table class="wikitable" aria-label="Table 6: Cascade relevance in medicinal chemistry areas">
+  <caption style="font-weight:bold; text-align:left; padding-bottom:5px;">Table 6.&ensp;Cascade reactions in medicinal chemistry: selected areas and relevance</caption>
+  <thead>
+    <tr>
+      <th>Medicinal chemistry area</th>
+      <th>Cascade relevance</th>
+      <th>Example scaffold type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Natural product analog synthesis</b></td>
+      <td>Cascade routes can reduce step count for structurally complex lead compounds; analogs may retain key pharmacophoric elements while being more synthetically accessible</td>
+      <td>Terpenoid, alkaloid, and polyketide frameworks</td>
+    </tr>
+    <tr>
+      <td><b>Anticancer lead discovery</b></td>
+      <td>Ring-forming cascade reactions provide access to polycyclic scaffolds that occupy biologically relevant chemical space; activity depends on the specific target and compound</td>
+      <td>Steroid-like frameworks, decalin-type ring systems</td>
+    </tr>
+    <tr>
+      <td><b>Antibiotic and anti-infective scaffolds</b></td>
+      <td>Complex ring systems in many antibiotics are biosynthetically derived from enzymatic cascades; synthetic analogs can sometimes be accessed by cascade approaches or genome-mining-guided biocatalysis</td>
+      <td>Macrolide-type and polyketide-type structures</td>
+    </tr>
+    <tr>
+      <td><b>Chiral building blocks</b></td>
+      <td>Enzymatic cascades (transaminases, ketoreductases) produce enantiopure intermediates efficiently and have been implemented industrially for pharmaceutical manufacturing</td>
+      <td>Amino acids, β-hydroxy acids, chiral amines</td>
+    </tr>
+    <tr>
+      <td><b>Steroid-like and terpenoid frameworks</b></td>
+      <td>Cationic cascade cyclizations, including biomimetic polyene cyclizations, can access steroid-like ring systems; stereoselectivity in non-enzymatic versions varies and requires substrate optimization</td>
+      <td>A/B/C/D polycyclic ring systems; angular and linear fused systems</td>
+    </tr>
+  </tbody>
+</table>
+<p class="tbl-note">Table 6. Selected medicinal chemistry areas where cascade reactions are relevant, with the nature of the relevance and an example scaffold type. Cascade approaches are one among several strategies; the utility of a cascade route depends on the specific target and available chemistry.<sup><a href="#ref2">[2]</a>,<a href="#ref3">[3]</a>,<a href="#ref6">[6]</a></sup></p>
+
+<h4>Chiral building blocks</h4>
+<p>Enzymatic cascades are valued for producing chiral building blocks with predictable absolute configuration. Transaminase cascades and ketoreductase cascades have been implemented industrially to produce amino acid and hydroxy acid intermediates for pharmaceutical synthesis.<sup><a href="#ref1">[1]</a></sup></p>
+
+<h4>Late-stage diversification</h4>
+<p>Cascade logic can be applied at late stages of a synthesis to diversify a common intermediate into multiple analogs—an approach termed <b>late-stage functionalization</b>. This exploits the fact that a cascade can tolerate variation in peripheral functionality without disrupting the core reaction sequence.<sup><a href="#ref3">[3]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════
+     10. LIMITATIONS
+════════════════════════════════════════════ -->
+<h2 id="limitations">Limitations</h2>
+
+<p>Despite their synthetic utility, cascade reactions present characteristic challenges that limit their applicability and require careful design.</p>
+
+<h4>Competing pathways</h4>
+<p>Because reactive intermediates are not isolated, any intermediate can potentially react through an unintended pathway. Carbocation intermediates in cationic cascades, for example, can rearrange, be trapped by nucleophiles, or undergo elimination before the intended cyclization occurs.<sup><a href="#ref2">[2]</a></sup></p>
+
+<h4>Functional-group incompatibility</h4>
+<p>A cascade that requires strongly acidic conditions in one step is incompatible with base-sensitive functional groups present at the same stage. This is a fundamental constraint: all conditions must be globally compatible with all functional groups present throughout the cascade.<sup><a href="#ref4">[4]</a></sup></p>
+
+<h4>Difficulty identifying intermediates</h4>
+<p>Because intermediates are not isolated, spectroscopic characterization of each transformation is difficult under cascade conditions. Mechanistic assignments often rely on computational modeling, isotope-labeling experiments, or the use of model substrates designed to halt the cascade at a defined step.<sup><a href="#ref2">[2]</a></sup></p>
+
+<h4>Scale-up challenges</h4>
+<p>Cascade reactions optimized on milligram scale in discovery settings may not perform equivalently at larger scale. Differences in heat transfer, mixing, and local reagent concentration can alter the selectivity of competing steps, making process development for cascade routes technically demanding.</p>
+
+<h4>Enzyme availability and substrate scope</h4>
+<p>For enzymatic cascades, availability of an enzyme with the required substrate scope is a practical constraint. While protein engineering can broaden substrate scope and improve stability, this requires additional effort and is not always successful.<sup><a href="#ref1">[1]</a></sup></p>
+
+<!-- ═══════════════════════════════════════════
+     11. CHEM 236 CONNECTION
+════════════════════════════════════════════ -->
+<h2 id="chem236">CHEM 236 connection</h2>
+
+<div class="sidebox">
+  <div class="boxtitle">Why this matters in CHEM 236</div>
+  <p style="margin-bottom:6px;">Cascade reactions integrate core CHEM 236 concepts:</p>
+  <ul style="padding-left:1.6em; margin-bottom:0;">
+    <li style="margin-bottom:4px;"><b>Mechanism.</b> Every step in a cascade proceeds through a defined mechanistic pathway—carbocation, enolate, radical, or pericyclic—and must be mechanistically justified.</li>
+    <li style="margin-bottom:4px;"><b>Selectivity.</b> Chemoselectivity, regioselectivity, and stereoselectivity determine whether the cascade delivers the desired product or a mixture of byproducts.</li>
+    <li style="margin-bottom:4px;"><b>Functional-group compatibility.</b> Cascade design requires knowing which functional groups survive—and which do not—under the conditions required at each step.</li>
+    <li style="margin-bottom:4px;"><b>Retrosynthesis.</b> Identifying cascade disconnections in a complex molecule is a key retrosynthetic skill; it requires recognizing when multiple bonds in the target could have formed in a single sequential operation.</li>
+    <li style="margin-bottom:4px;"><b>Catalysis.</b> Both enzymatic and non-enzymatic cascades depend on catalysts for selectivity; understanding what the catalyst does at each step is central to understanding why the cascade works.</li>
+    <li style="margin-bottom:4px;"><b>Enzyme families.</b> Terpene synthases, PKS, PLP-dependent enzymes, radical SAM enzymes, and pericyclases each demonstrate a distinct mechanistic logic that maps directly onto organic reaction classes discussed in this course.</li>
+    <li style="margin-bottom:4px;"><b>Interdisciplinary scope.</b> Genome mining connects organic chemistry with biosynthesis, bioinformatics, and pharmacology, illustrating how cascade logic appears across disciplinary boundaries.</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     12. SUMMARY
+════════════════════════════════════════════ -->
+<h2 id="summary">Summary</h2>
+
+<p>Cascade reactions represent a fundamental organizing principle of bond-forming chemistry, found in both biological systems and synthetic laboratories. They range from enzymatic electrophilic cyclizations that build terpene ring systems in a single active-site event, to organocatalytic multi-step sequences that install multiple stereocenters in one flask. Their common features—sequential reactivity, no intermediate isolation, and mechanistic connectivity between steps—distinguish them from one-pot reactions and give them distinct advantages in step economy and complexity generation.</p>
+
+<p>In biosynthesis, enzyme families including terpene synthases, polyketide synthases, PLP-dependent enzymes, radical SAM enzymes, and pericyclases each execute characteristic cascade-type transformations. Genome sequencing and biosynthetic gene cluster analysis have extended the discovery of such pathways and now inform the design of biomimetic synthetic routes. In total synthesis, cascade logic is applied through ionic, radical, pericyclic, and transition-metal-catalyzed sequences, with the goal of compressing step count and increasing route efficiency.</p>
+
+<p>The main limitations of cascade reactions—functional-group incompatibility, competing pathways, difficulty characterizing intermediates, and scale-up uncertainty—are addressed by careful retrosynthetic design, mechanistic analysis, and, in enzymatic systems, protein engineering. The decision to pursue a cascade route rather than a stepwise approach requires balancing these considerations against the synthetic and practical advantages of the cascade strategy.<sup><a href="#ref2">[2]</a>,<a href="#ref4">[4]</a></sup></p>
 
 <hr class="divider" />
 
-<!-- REFERENCES -->
+<!-- ═══════════════════════════════════════════
+     REFERENCES
+════════════════════════════════════════════ -->
 <h2 id="references">References</h2>
 <div class="reflist">
   <ol>
@@ -624,10 +797,13 @@
     <li id="ref5">Tietze, L. F.; Brasche, G.; Gericke, K. M. <i>Domino Reactions in Organic Synthesis.</i> Wiley-VCH: Weinheim, 2006.</li>
     <li id="ref6">Nicolaou, K. C.; Chen, J. S. "The art of total synthesis through cascade reactions." <i>Chem. Soc. Rev.</i> <b>2009</b>, <i>38</i>, 2993–3009. DOI:&nbsp;<a href="https://doi.org/10.1039/B903290H">10.1039/B903290H</a>.</li>
     <li id="ref7">Burke, M. D.; Schreiber, S. L. "A planning strategy for diversity-oriented synthesis." <i>Angew. Chem. Int. Ed.</i> <b>2004</b>, <i>43</i>, 46–58. DOI:&nbsp;<a href="https://doi.org/10.1002/anie.200300626">10.1002/anie.200300626</a>.</li>
+    <li id="ref8"><i>J. Am. Chem. Soc.</i> <b>2017</b>, <i>139</i>, 13304–13307. DOI:&nbsp;<a href="https://doi.org/10.1021/jacs.7b08577">10.1021/jacs.7b08577</a>. (Modular building-block approach to cascade and convergent synthesis design; full author and title information available via DOI link.)</li>
   </ol>
 </div>
 
-<!-- MEDIA CREDITS -->
+<!-- ═══════════════════════════════════════════
+     MEDIA CREDITS
+════════════════════════════════════════════ -->
 <h2 id="media">Media credits</h2>
 <div class="reflist">
   <ol>
